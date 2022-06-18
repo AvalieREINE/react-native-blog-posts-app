@@ -1,11 +1,16 @@
 import React, {Dispatch} from "react"; 
 export type State = Post[] | [];
 
-export type Action = AddPost | DeletePost | EditPost;
+export type Action = AddPost | DeletePost | EditPost | getPosts;
 
 export interface AddPost {
   type: ActionKind.addPost
   payload: Post
+}
+
+export interface getPosts {
+  type: ActionKind.getPosts
+  payload: Post[]
 }
 
 export interface DeletePost {
@@ -20,7 +25,8 @@ export interface EditPost {
 export enum ActionKind {
    addPost = 'add_blogpost',
    deletePost = 'delete_blogpost',
-   editPost = 'edit_blogpost'
+   editPost = 'edit_blogpost',
+   getPosts = 'get_blogposts'
 }
 export type Post = {
   id?: number
@@ -32,13 +38,15 @@ export type context = {
   addBlogPost:   (title: string, content: string ) => void
   editBlogPost:   (title: string, content: string, id: number) => void
   deleteBlogPost: (id: number) => void
+  getBlogPosts: () => void
 }
 export type Actions = {
   addBlogPost: (dispatch: Dispatch<Action>) => (title: string, content: string ) => void
   editBlogPost: (dispatch: Dispatch<Action>) => (title: string, content: string, id: number) => void
   deleteBlogPost: (dispatch: Dispatch<Action>) => (id: number) => void
+  getBlogPosts: (dispatch: Dispatch<Action>) => () => void
 }
 
-export const InitialState = [{title: 'Test Post', content: 'Test Content', id: 1}];
+export const InitialState = [];
 
 export type BoundActions = Actions | {};

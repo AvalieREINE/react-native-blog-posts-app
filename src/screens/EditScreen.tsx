@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React, {useContext, useState} from 'react'
 import {Context} from '../context/BlogContext'
-import {context} from '../constants/index';
+import {context} from '../types/index';
 import BlogPostForm from '../components/BlogPostForm';
 
 const EditScreen = ({route, navigation}) => {

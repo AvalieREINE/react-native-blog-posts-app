@@ -1,3 +1,24 @@
 {
-  "blogposts": []
+  "blogposts": [
+    {
+      "id": 1,
+      "title": "test blog 1",
+      "content": "content for api test blog"
+    },
+    {
+      "title": "Be nb",
+      "content": "Bm",
+      "id": 2
+    },
+    {
+      "title": "Nre ",
+      "content": "N ",
+      "id": 3
+    },
+    {
+      "title": "Today is a new day",
+      "content": "What time tomorrow is your appointment with the new w code for your we",
+      "id": 4
+    }
+  ]
 }

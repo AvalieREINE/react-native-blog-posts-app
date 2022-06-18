@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, {useContext} from 'react'
 import { Context } from '../context/BlogContext';
-import {context, Post} from '../constants/index';
+import {context, Post} from '../types/index';
 
 const ShowScreen = ({route}) => {
   const {id} = route.params;

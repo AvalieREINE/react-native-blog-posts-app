@@ -1,5 +1,5 @@
 import React, {FC,  useReducer,Dispatch} from "react";
-import { BoundActions, Actions} from '../constants/index';
+import { BoundActions, Actions} from '../types/index';
 
 
 export default (reducer : any, actions:Actions, initialState ) => {
